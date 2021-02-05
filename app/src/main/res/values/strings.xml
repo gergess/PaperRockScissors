@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">PaperRockScissors</string>
+    <string name="play">Play</string>
+    <string name="input_fragment">Input Fragment</string>
+    <string name="choose">Choose</string>
+    <string name="rock">Rock</string>
+    <string name="paper">Paper</string>
+    <string name="scissor">Scissor</string>
+    <string name="output_fragment">Output Fragment</string>
+    <string name="results">Results</string>
+    <string name="your_choice">Your Choice</string>
+    <string name="player_choice">Player Choice</string>
+    <string name="bot_choice">Bot Choice</string>
+    <string name="bot_choice">Bot Choice</string>
+    <string name="result">Result</string>
+    <string name="play_again">Play Again</string>
 </resources>

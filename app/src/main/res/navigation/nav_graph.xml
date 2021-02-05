@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/InputFragment">
+
+    <fragment
+        android:id="@+id/InputFragment"
+        android:name="sheridan.gergess.paperrockscissors.fragments.InputFragment"
+        android:label="Input"
+        tools:layout="@layout/input_fragment">
+
+        <action
+            android:id="@+id/action_input_to_output"
+            app:destination="@id/OutputFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/OutputFragment"
+        android:name="sheridan.gergess.paperrockscissors.fragments.OutputFragment"
+        android:label="Output"
+        tools:layout="@layout/output_fragment">
+
+        <action
+            android:id="@+id/action_output_to_input"
+            app:destination="@id/InputFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/InputFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <dialog
+        android:id="@+id/AboutFragment"
+        android:name="sheridan.gergess.paperrockscissors.fragments.AboutFragment"
+        android:label="About" />
+    <action android:id="@+id/action_global_to_about" app:destination="@id/AboutFragment" />
+</navigation>
