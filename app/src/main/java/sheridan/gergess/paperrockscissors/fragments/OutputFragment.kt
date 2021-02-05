@@ -9,7 +9,6 @@ import androidx.navigation.fragment.findNavController
 import sheridan.gergess.paperrockscissors.Envelope
 import sheridan.gergess.paperrockscissors.R
 import sheridan.gergess.paperrockscissors.databinding.OutputFragmentBinding
-import kotlin.random.Random
 
 class OutputFragment : Fragment() {
 
@@ -45,25 +44,17 @@ class OutputFragment : Fragment() {
 
     private fun showResult() {
 
-        val playerChoice = envelope.choice
-
-        val random = Random.nextInt(0,3)
-
-        val botChoice = when (random){
-            0 -> "Rock"
-            1 -> "Paper"
-            2 -> "Scissor"
-            else -> "None"
-        }
+        val playerChoice = envelope.playerChoice
+        val botChoice = envelope.botChoice
 
         var winner = ""
 
         if(playerChoice === botChoice){
-            winner = "tie"
+            winner = "Tie, Keep it up!"
         }else if ((playerChoice == "Rock" && botChoice == "Paper") || (playerChoice == "Paper" && botChoice == "Scissor") || (playerChoice == "Scissor" && botChoice == "Rock")){
-            winner = "bot"
+            winner = "Bot, Good luck next time!"
         }else if(botChoice != null && playerChoice != null){
-            winner = "player"
+            winner = "You, Yaaay Congrats"
         }
 
         binding.playerOutput.text = playerChoice

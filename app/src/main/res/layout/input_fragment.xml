@@ -8,11 +8,6 @@
     android:gravity="center_horizontal"
     tools:context=".fragments.InputFragment">
 
-    <TextView
-        android:id="@+id/input_fragment_label"
-        style="@style/fragment_label"
-        android:text="@string/input_fragment" />
-
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -20,10 +15,11 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/choose"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="24sp" />
 
     <RadioGroup
         android:id="@+id/choice_group"

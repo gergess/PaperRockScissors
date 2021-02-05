@@ -8,11 +8,6 @@
     android:gravity="center_horizontal"
     tools:context=".fragments.OutputFragment">
 
-    <TextView
-        android:id="@+id/output_fragment_label"
-        style="@style/fragment_label"
-        android:text="@string/output_fragment" />
-
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -23,7 +18,7 @@
         android:layout_height="wrap_content"
         android:text="@string/results"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textSize="24sp" />
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/textView2"
@@ -31,7 +26,7 @@
         android:layout_height="wrap_content"
         android:text="@string/your_choice"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textSize="24sp" />
+        android:textSize="22sp" />
 
     <TextView
         android:id="@+id/player_output"
@@ -39,7 +34,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/gap0"
         android:text="@string/player_choice"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -47,14 +43,28 @@
         android:layout_height="wrap_content"
         android:text="@string/bot_choice"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textSize="24sp" />
+        android:textSize="22sp" />
 
     <TextView
         android:id="@+id/bot_output"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/bot_choice"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="18sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2" />
+
+    <TextView
+        android:id="@+id/Results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/results"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="22sp" />
 
     <TextView
         android:id="@+id/results_output"

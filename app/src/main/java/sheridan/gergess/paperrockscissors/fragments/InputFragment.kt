@@ -11,6 +11,7 @@ import sheridan.gergess.paperrockscissors.Envelope
 import sheridan.gergess.paperrockscissors.R
 import sheridan.gergess.paperrockscissors.databinding.InputFragmentBinding
 import sheridan.gergess.paperrockscissors.fragments.OutputFragment.Companion.ENVELOPE
+import kotlin.random.Random
 
 class InputFragment : Fragment() {
 
@@ -40,9 +41,17 @@ class InputFragment : Fragment() {
             R.id.scissor_button -> "Scissor"
             else -> "None"
         }
+        val random = Random.nextInt(0,3)
+
+        val botChoice = when (random){
+            0 -> "Rock"
+            1 -> "Paper"
+            2 -> "Scissor"
+            else -> "None"
+        }
 
         val arguments = Bundle()
-        arguments.putSerializable(ENVELOPE, Envelope(choice))
+        arguments.putSerializable(ENVELOPE, Envelope(choice, botChoice))
         navController.navigate(R.id.action_input_to_output, arguments)
     }
 }
