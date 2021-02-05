@@ -11,7 +11,7 @@
     <string name="your_choice">Your Choice</string>
     <string name="player_choice">Player Choice</string>
     <string name="bot_choice">Bot Choice</string>
-    <string name="bot_choice">Bot Choice</string>
     <string name="result">Result</string>
     <string name="play_again">Play Again</string>
+    <string name="author">Samuel Gerges</string>
 </resources>

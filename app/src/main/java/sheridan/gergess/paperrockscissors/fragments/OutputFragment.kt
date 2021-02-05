@@ -5,7 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import sheridan.gergess.paperrockscissors.Envelope
+import sheridan.gergess.paperrockscissors.R
 import sheridan.gergess.paperrockscissors.databinding.OutputFragmentBinding
 import kotlin.random.Random
 
@@ -31,6 +33,15 @@ class OutputFragment : Fragment() {
         showResult()
         return binding.root
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.backButton.setOnClickListener {
+            findNavController().navigate(R.id.action_output_to_input)
+        }
+    }
+
 
     private fun showResult() {
 
@@ -60,5 +71,10 @@ class OutputFragment : Fragment() {
 
         binding.resultsOutput.text = winner
 
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
